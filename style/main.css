@@ -1,0 +1,312 @@
+@import url(./poppins/stylesheet.css);
+@import url(./mulish/stylesheet.css);
+
+body {
+    --background-color: #fafafa;
+    --color-black-main: #181818;
+    --color-black-light: #323232;
+    --color-gray-main: #858585;
+    --color-gray-light: #d5d5d5;
+
+    --font-size-chapter: 1.4rem;
+
+    --font-size: 1rem;
+    --line-height: 1.5rem;
+    
+    --font-size-small: 0.85rem;
+
+    --font-size-header: 2.4rem;
+    --font-size-header-small: 1.25em;
+    --border-width: 1.75px;
+    --border-small-width: 1px;
+    --body-padding: 1rem 1.5rem;
+    --top-page-padding: 1.5rem;
+    --contacts-padding: .5rem .25rem;
+
+    --language-height: 2rem;
+
+    --vertical-line-offset: -12.5px;
+    margin: 0 auto;
+    max-width: 9.25in;
+    padding: var(--body-padding);
+    font-family: "Mulish";
+    font-weight: 300;
+    background-color: var(--background-color);
+    color: var(--color-black-main);
+}
+
+b {
+    font-weight: 500;
+}
+
+#contacts .field,
+#language .field,
+h1,
+h2 {
+    font-family: "Poppins";
+    text-transform: uppercase;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: var(--font-size-header);
+    line-height: 1.2em;
+}
+
+h2 {
+    font-weight: 600;
+    font-size: var(--font-size-chapter);
+    border-bottom: var(--border-width) solid;
+    margin-block: 0;
+    padding-bottom: .25rem;
+}
+
+#contacts,
+#language {
+    padding: 0;
+    margin-block: 0;
+}
+
+#experience {
+    margin-block-end: 0;
+}
+
+#contacts .field,
+#language .field {
+    font-weight: 600;
+    font-size: var(--font-size);
+    border-bottom: var(--border-small-width) var(--color-black-main) solid;
+    padding: var(--contacts-padding);
+    width: 6rem;
+    margin-bottom: calc(var(--border-small-width) * -1);
+}
+
+#contacts .value,
+#language .value,
+h4,
+section p {
+    font-family: "Mulish";
+    color: var(--color-black-light);
+}
+
+#contacts .value,
+#language .value,
+#contacts .value a,
+section p {
+    font-size: var(--font-size);
+    padding: 0 0.25rem;
+    margin-left: auto;
+    margin-block: auto;
+    color: var(--color-black-light);
+}
+
+section p {
+    margin: .5rem 0 0 0;
+    line-height: var(--line-height);
+}
+
+#contacts li,
+#language li {
+    position: relative;
+    list-style: none;
+    display: flex;
+    border-bottom: var(--border-small-width) var(--color-gray-light) solid;
+}
+
+h4 {
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: var(--font-size-header-small);
+}
+
+section {
+    padding-top: 1.5rem;
+}
+
+section:first-of-type {
+    padding-top: var(--top-page-padding);
+}
+
+#about h1,
+#about h4 {
+    margin: 0;
+}
+
+#experience,
+#education {
+    padding-left: 1rem;
+    list-style-type: none;
+    font-size: var(--font-size);
+}
+
+#experience>li.job,
+#education>li.school {
+    position: relative;
+}
+
+.job-header .name::before,
+.school-header .name::before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-black-main);
+    border: 6px solid var(--background-color);
+    border-radius: 50%;
+    left: -22px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#experience>li.job:not(:last-of-type):before,
+#education>li.school:not(:last-of-type):before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: var(--border-small-width);
+    background-color: var(--color-black-main);
+    left: var(--vertical-line-offset);
+    z-index: -1;
+    top: 8px;
+}
+
+ul.job-description {
+    list-style: disc;
+    padding: .75rem 3rem;
+}
+
+ul.job-description>li {
+    line-height: var(--line-height);
+}
+
+.description,
+.institute {
+    display: inline-block;
+    padding: 0 1rem;
+    line-height: var(--line-height);
+}
+
+.description:not(:first-of-type) {
+    margin-top: 0.5rem;
+}
+
+.job,
+.school {
+    padding-block-start: .5rem;
+}
+
+.job:first-of-type,
+.school:first-of-type {
+    padding-block-start: 0;
+}
+
+.job-header {
+    padding-block-end: 0.5rem;
+}
+
+.job-header,
+.school-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.job-header .date,
+.school-header .date,
+.institute {
+    font-size: var(--font-size-small);
+    color: var(--color-gray-main);
+    font-weight: 500;
+}
+
+.job-header .name,
+.school-header .name {
+    position: relative;
+    font-family: "Poppins";
+    margin: 0;
+    font-size: var(--font-size);
+    font-weight: 600;
+}
+
+#language .field .skill:first-of-type {
+    margin-top: 0.25rem;
+}
+
+#language .field .skill {
+    display: block;
+    position: relative;
+    font-family: "Mulish";
+    font-weight: 300;
+    text-transform: capitalize;
+    line-height: var(--language-height);
+    padding-left: calc(var(--language-height) / 4);
+}
+
+#language .value {
+    display: block;
+    margin-block-end: 0.5rem;
+}
+
+.value .level {
+    display: flex;
+    flex-direction: row;
+    gap: calc(var(--language-height) * 0.175);
+    height: var(--language-height);
+    align-items: center;
+}
+
+.value .level .literal {
+    margin-right: 0.5rem;
+}
+
+
+.value .level .empty-circle,
+.value .level .filled-circle {
+    display: block;
+    width: calc(var(--language-height) / 2);
+    height: calc(var(--language-height) / 2);
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.value .level .empty-circle {
+    background-color: var(--color-gray-light);
+}
+
+.value .level .filled-circle {
+    background-color: var(--color-black-light);
+}
+
+.dont-split {
+    page-break-inside: avoid;
+}
+
+@media print {
+    body {
+        --font-size-header: 2rem;
+        --font-size-header-small: 1rem;
+        --body-padding: 0;
+        --background-color: white;
+        --top-page-padding: 0;
+        --contacts-padding: .35rem .25rem;
+        --font-size: 0.75rem;
+        --line-height: 1.125rem;
+        --font-size-chapter: 1rem;
+        --font-size-small: 0.65rem;
+        --language-height: 1.5rem;
+        --vertical-line-offset: -12.75px;
+    }
+
+}
+
+@page {
+    @top-left {
+        content: none;
+    }
+}
+
+@page {
+    size: 7in 9.25in;
+    margin: 16mm 16mm 18mm 16mm;
+}
